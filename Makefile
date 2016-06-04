@@ -9,8 +9,12 @@ main.o: src/main.c
 quadratic.o: src/quadratic.c
 	gcc -c src/quadratic.c -o obj/quadratic.o
 
-prepare:
+prepare: bin obj
+
+bin:
 	mkdir bin
+	
+obj:
 	mkdir obj
 
 clean:
