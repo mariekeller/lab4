@@ -27,10 +27,13 @@ CTEST(quadratic, two_roots)
 	float x2;
 
     const int res = solve(a, b, c, &x1, &x2);
-
+    
+    const int expented_res = 0;
+	
     const int expected_x1 = 2;
 	const int expected_x2 = -12;
 	
+	ASSERT_EQUAL (expented_res, res);
     ASSERT_DBL_NEAR(expected_x1, x1);
     ASSERT_DBL_NEAR(expected_x2, x2);
 }
@@ -46,9 +49,12 @@ CTEST(quadratic, equal_roots)
 
     const int res = solve(a, b, c, &x1, &x2);
 
+	const int expented_res = -1;
+
     const int expected_x1 = -3;
 	const int expected_x2 = -3;
-
+	
+	ASSERT_EQUAL (expented_res, res);
     ASSERT_DBL_NEAR(expected_x1, x1);
 }
 
@@ -63,7 +69,7 @@ CTEST(quadratic, negative_discriminant)
 
     const int res = solve(a, b, c, &x1, &x2);
 
-    const double expected_res = 2;
-
-    ASSERT_DBL_NEAR(expected_res, res);
+    const int expected_res = 2;
+    
+    ASSERT_EQUAL (expented_res, res);
 }
