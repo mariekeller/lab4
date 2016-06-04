@@ -20,8 +20,8 @@ CTEST(quadratic, zero)
 CTEST(quadratic, two_roots)
 {
     const float a = 1;
-    const float b = 3.5;
-    const float c = 2;
+    const float b = 10;
+    const float c = 24;
 	
     float x1;
     float x2;
@@ -30,8 +30,8 @@ CTEST(quadratic, two_roots)
     
     const int expected_res = 0;
 	
-    const float expected_x1 = -0.72;
-    const float expected_x2 = -2.78;
+    const float expected_x1 = -4;
+    const float expected_x2 = -6;
 	
     ASSERT_EQUAL (expected_res, res);
     ASSERT_DBL_NEAR(expected_x1, x1);
